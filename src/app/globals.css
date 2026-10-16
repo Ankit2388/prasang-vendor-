@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  :root,
+  :root[data-theme="prasang"] {
+    --app-primary: #EF4C18;
+    --app-primary-hover: #C83E12;
+    --app-primary-100: #FBEFE5;
+    --app-primary-50: #FFF6F1;
+    --app-background: #FDF6F2;
+    --app-surface: #FDFAF9;
+    --app-surface-2: #F9F3F0;
+    --app-text-primary: #282024;
+    --app-text-secondary: #504C4C;
+    --app-text-muted: #8A8181;
+    --app-border: #DDCEC4;
+    --app-accent-gold: #E8AE75;
+    --app-accent-brown: #926A45;
+    --app-white: #FFFFFF;
+    --app-ring: rgba(239, 76, 24, 0.25);
+  }
+
+  :root[data-theme="emerald"] {
+    --app-primary: #0F5132;
+    --app-primary-hover: #0B3D26;
+    --app-primary-100: #E8F5E9;
+    --app-primary-50: #F2F9F4;
+    --app-background: #F4F7F5;
+    --app-surface: #FCFDFD;
+    --app-surface-2: #EBF1EE;
+    --app-text-primary: #14241C;
+    --app-text-secondary: #3D5245;
+    --app-text-muted: #6E8074;
+    --app-border: #CFDBD3;
+    --app-accent-gold: #C59B27;
+    --app-accent-brown: #8A6715;
+    --app-white: #FFFFFF;
+    --app-ring: rgba(15, 81, 50, 0.25);
+  }
+}
+
+@theme {
+  --color-primary: var(--app-primary);
+  --color-primary-hover: var(--app-primary-hover);
+  --color-primary-100: var(--app-primary-100);
+  --color-primary-50: var(--app-primary-50);
+  --color-background: var(--app-background);
+  --color-surface: var(--app-surface);
+  --color-surface-2: var(--app-surface-2);
+  --color-text-primary: var(--app-text-primary);
+  --color-text-secondary: var(--app-text-secondary);
+  --color-text-muted: var(--app-text-muted);
+  --color-border: var(--app-border);
+  --color-accent-gold: var(--app-accent-gold);
+  --color-accent-brown: var(--app-accent-brown);
+  --color-card: var(--app-surface);
+}
+
+body {
+  background-color: var(--app-background);
+  color: var(--app-text-primary);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--app-surface-2);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--app-border);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--app-text-muted);
+}
